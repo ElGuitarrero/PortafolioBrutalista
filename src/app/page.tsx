@@ -1,7 +1,9 @@
 'use client'
 
+
 import React, { useState } from "react";
 import Experience from "./components/Experience";
+import Hero from "./components/Hero";
 
 export default function Home() {
   const [size, setSize] = useState(16)
@@ -23,6 +25,7 @@ export default function Home() {
     <div>
       <p style={ {fontSize: `${size}px`} }>El tamano de este texto es {size}px</p>
       <button onClick={handleSizeChange}>Cambiar size</button>
+      <Hero></Hero>
       <Experience></Experience>
     </div>
   )
