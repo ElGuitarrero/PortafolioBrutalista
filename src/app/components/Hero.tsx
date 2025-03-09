@@ -27,6 +27,8 @@ const Hero = () => (
         {/* Imagen */}
         <div className="w-full lg:w-2/5 flex p-5 justify-center">
             <Image
+                width={500}
+                height={500}
                 src="/foto.png"
                 alt="Profile Picture"
                 className=" grayscale-30 drop-shadow-xl w-40 md:w-60 lg:w-80 outline-2 outline-offset-10 lg:outline-offset-40"

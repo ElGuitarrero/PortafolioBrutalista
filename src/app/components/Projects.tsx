@@ -31,7 +31,7 @@ const Proyecto = (informacion:ProyectoProp) => {
         <div className="flex flex-col lg:flex-row lg:gap-10 lg:mx-5 lg:border-y-3">
             {/* Imagen */}
             <div className="basis-4/8 flex justify-center items-center lg:p-5">
-                <Image src={informacion.imagen} className='aspect-20/12 object-cover w-1/1 i lg:rounded-md drop-shadow-2xl' alt="" />
+                <Image width={400} height={600} src={informacion.imagen} className='aspect-20/12 object-cover w-1/1 i lg:rounded-md drop-shadow-2xl' alt="" />
             </div>
 
             {/* Informacion del proyecto */}
