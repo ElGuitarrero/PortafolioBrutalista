@@ -15,7 +15,7 @@ const Hero = () => (
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <button className="border-2 p-4 md:p-5 font-black text-lg">
-                    <a href="#projects">Explore My Experience</a>
+                    <a href="#experience">Explore My Experience</a>
                 </button>
                 <button className="border-2 p-4 md:p-5 font-black text-lg">
                     <a href="#projects">Explore My Projects</a>

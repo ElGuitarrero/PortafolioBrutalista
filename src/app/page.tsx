@@ -8,6 +8,7 @@ import Projects from "./components/Projects";
 import Hello from "./components/Hello";
 import '@/app/components/debug.css'
 import ParallaxText from "./components/Parallax";
+import Contacto from "./components/Contact";
 
 
 export default function Home() {
@@ -35,6 +36,7 @@ export default function Home() {
       <Hero></Hero>
       <Experience></Experience>
       <Projects></Projects>
+      <Contacto></Contacto>
     </div>
   )
 }

@@ -59,12 +59,12 @@ const Experience = () => {
         const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         let iteration = 0;
         const intervalKey = element.id || `default-${Date.now()}`;
-    
+
         // Limpiar intervalo previo
         if (intervalRefs.current[intervalKey]) {
             clearInterval(intervalRefs.current[intervalKey]!);
         }
-    
+
         intervalRefs.current[intervalKey] = setInterval(() => {
             element.innerText = targetText
                 .split("")
@@ -72,21 +72,21 @@ const Experience = () => {
                     if (idx < iteration) {
                         return char; // Si ya alcanzó el índice, muestra el carácter original
                     }
-    
+
                     // Si el carácter es un espacio, no lo cambiamos
                     return char === ' ' ? ' ' : letters[Math.floor(Math.random() * letters.length)];
                 })
                 .join("");
-    
+
             if (iteration >= targetText.length) {
                 clearInterval(intervalRefs.current[intervalKey]!);
                 intervalRefs.current[intervalKey] = null;
             }
-    
+
             iteration += 1;
         }, 7);
     };
-    
+
     useEffect(() => {
         const datos = document.querySelectorAll(".animate-data");
         datos.forEach((elem) => {
@@ -97,46 +97,53 @@ const Experience = () => {
     const companias: string[] = ["Oracle", "Tata", "Tracsa"];
 
     return (
-        <section id="experience" className="min-h-screen lg:bg-[url('/fondos/exp-fondo2.png')] bg-fixed bg-cover bg-no-repeat px-5 py-10">
-            <div className="flex flex-col lg:flex-row gap-5 justify-center items-center w-full min-h-screen">
-                {/* Botones de selección de empresa */}
-                <div className="w-full lg:w-1/4 flex flex-col gap-5 p-5 justify-center items-center">
-                    {companias.map((elem, index) => (
-                        <button
-                            key={index}
-                            onClick={() => handleChangeCompany(elem)}
-                            className={`
+        <div id="experience">
+            <div className='flex justify-center'>
+                <h2 className='font-[carbon] text-3xl'>Experience</h2>
+            </div>
+            <section id="experience" className="min-h-screen lg:bg-[url('/fondos/exp-fondo2.png')] bg-fixed bg-cover bg-no-repeat px-5 py-10">
+                <div className="flex flex-col lg:flex-row gap-5 justify-center items-center w-full min-h-screen">
+                    {/* Botones de selección de empresa */}
+                    <div className="w-full lg:w-1/4 flex flex-col gap-5 p-5 justify-center items-center">
+                        {companias.map((elem, index) => (
+                            <button
+                                key={index}
+                                onClick={() => handleChangeCompany(elem)}
+                                className={`
                                 w-full lg:w-11/12 h-20 md:h-24 text-black border-2 border-black
                                 transition duration-300 ease-in-out
                                 ${selectedCompany === elem ? 'bg-gray-300' : 'bg-[rgb(240,240,240)]'}
                             `}
-                            id={elem}
-                        >
-                            <div className="h-full w-full flex justify-center items-center">
-                                <p className="font-[carbon] text-2xl md:text-3xl lg:text-4xl">{elem}</p>
-                            </div>
-                        </button>
-                    ))}
-                </div>
-    
-                {/* Información de experiencia */}
-                <div className="w-full lg:w-3/4 flex flex-col p-5 justify-center items-start flex-grow">
-                    <h3 className="animate-data text-2xl md:text-3xl lg:text-5xl mb-2 font-[carbon]" id="position">
-                        {expData?.position}
-                    </h3>
-                    <p className="animate-data text-lg md:text-xl lg:text-2xl font-light mb-5 font-[FiraCode]" id="company">
-                        {expData?.company === 'Tata' ? "Tata Consultancy Services" : expData.company}
-                    </p>
-                    <ul className="ml-4 list-disc">
-                        {expData?.bulletpoints.map((point, index) => (
-                            <li className="animate-data text-sm md:text-lg lg:text-xl tracking-tight font-light mb-1 font-[FiraCode]" key={index} id={`bullet-${index}`}>
-                                {point}
-                            </li>
+                                id={elem}
+                            >
+                                <div className="h-full w-full flex justify-center items-center">
+                                    <p className="font-[carbon] text-2xl md:text-3xl lg:text-4xl">{elem}</p>
+                                </div>
+                            </button>
                         ))}
-                    </ul>
+                    </div>
+
+                    {/* Información de experiencia */}
+                    <div className="w-full lg:w-3/4 flex flex-col p-5 justify-center items-start flex-grow">
+                        <h3 className="animate-data text-2xl md:text-3xl lg:text-5xl mb-2 font-[carbon]" id="position">
+                            {expData?.position}
+                        </h3>
+                        <p className="animate-data text-lg md:text-xl lg:text-2xl font-light mb-5 font-[FiraCode]" id="company">
+                            {expData?.company === 'Tata' ? "Tata Consultancy Services" : expData.company}
+                        </p>
+                        <ul className="ml-4 list-disc">
+                            {expData?.bulletpoints.map((point, index) => (
+                                <li className="animate-data text-sm md:text-lg lg:text-xl tracking-tight font-light mb-1 font-[FiraCode]" key={index} id={`bullet-${index}`}>
+                                    {point}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
+
+
     );
 };
 
