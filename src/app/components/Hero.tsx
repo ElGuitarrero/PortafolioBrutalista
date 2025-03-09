@@ -1,15 +1,37 @@
-import '@/app/components/debug.css'
+import "@/app/components/debug.css";
+
 const Hero = () => (
-    <section id="home" className="flex flex-row gap-5 ml-5 mr-5 m-10">
-        <div className="basis-5/8 bordered p-4 flex gap-10 flex-col justify-start items-start">
-            <h1 className="text-7xl">Building Scalable & Efficient Web Solutions</h1>
-            <p className="text-2xl font-thin">Full-stack developer crafting high-performance applications with Next.js, .NET, and Ruby on Rails.</p>
-            <button className="bg-gray-400 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"><a href="#projects">Explore My Projects</a></button>
+    <section
+        id="home"
+        className="h-screen flex flex-col lg:flex-row justify-center items-center gap-8 px-5 py-10 font-[FiraCode]"
+    >
+        {/* Texto y botones */}
+        <div className="w-full lg:w-3/5 flex flex-col gap-6 text-center lg:text-left">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl tracking-tighter font-bold">
+                Building Scalable & Efficient Web Solutions
+            </h1>
+            <p className="text-lg md:text-xl lg:text-2xl font-thin tracking-tighter">
+                Full-stack developer crafting high-performance applications with Next.js, .NET, and Ruby on Rails.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <button className="border-2 p-4 md:p-5 font-black text-lg">
+                    <a href="#projects">Explore My Experience</a>
+                </button>
+                <button className="border-2 p-4 md:p-5 font-black text-lg">
+                    <a href="#projects">Explore My Projects</a>
+                </button>
+            </div>
         </div>
-        <div className="basis-3/8 bordered"> 
-            Imagen
+
+        {/* Imagen */}
+        <div className="w-full lg:w-2/5 flex p-5 justify-center">
+            <img
+                src="/foto.png"
+                alt="Profile Picture"
+                className=" grayscale-30 drop-shadow-xl w-40 md:w-60 lg:w-80 outline-2 outline-offset-10 lg:outline-offset-40"
+            />
         </div>
     </section>
-)
+);
 
 export default Hero;

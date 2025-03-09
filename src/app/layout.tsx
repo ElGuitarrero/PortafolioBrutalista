@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-      <header className={estilos.header}>Header</header>
+      {/* <header className={estilos.header}></header> */}
       
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}

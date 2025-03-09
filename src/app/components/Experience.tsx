@@ -1,7 +1,4 @@
 import { useEffect, useState, useRef } from "react";
-import estilos from "@/app/components/Experience.module.css";
-import '@/app/components/debug.css'
-
 
 interface ExperienceProp {
     position: string;
@@ -14,18 +11,22 @@ const DATA: ExperienceProp[] = [
         position: "Software Engineer",
         company: "Oracle",
         bulletpoints: [
-            "Developed and maintained web applications",
-            "Collaborated with cross-functional teams",
-            "Implemented new features and fixed bugs",
+            "Led the frontend and backend development and optimization of the Oracle Careers Website",
+            "Designed and implemented microservices in Rails and Django, improving system scalability by 30%",
+            "Provided mentorship to junior engineers and contributed to code reviews and key architectural decisions",
+            "Refactored PostreSQL and Redis queries, reducing API response times by 40%",
+            "Implemented CI/CD pipelines using Docker, Kubernetes, and GitHub actions, cutting deployment time by 50%.",
+            "Collaborated with product and architecture teams to enhance platform resilience against 200% traffic spikes."
         ],
     },
     {
         position: "Backend Developer",
         company: "Tata",
         bulletpoints: [
-            "Collaborated with cross-functional teams",
-            "Implemented new features and fixed bugs",
-            "Developed and maintained web applications",
+            "Developed scalable RESTful APIs in Ruby on Rails and Django for 500+ active monthly users.",
+            "Integrated GraphQL and WebSockets to improve real-time user experience.",
+            "Migrated on-premises infrastructure AWS with Terraform, reducing operational costs by 20%",
+            "Applied TDD with Spec and PyTest, improving code stability and reducing production incidents.",
         ],
     },
     {
@@ -57,33 +58,35 @@ const Experience = () => {
     const animateText = (element: HTMLElement, targetText: string) => {
         const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         let iteration = 0;
-        const intervalKey = element.id || `default-${Date.now()}`; // Generar clave única para cada elemento
-
-        // Limpiar intervalo anterior si existe
+        const intervalKey = element.id || `default-${Date.now()}`;
+    
+        // Limpiar intervalo previo
         if (intervalRefs.current[intervalKey]) {
             clearInterval(intervalRefs.current[intervalKey]!);
         }
-
-        // Establecer el intervalo para animar el texto
+    
         intervalRefs.current[intervalKey] = setInterval(() => {
             element.innerText = targetText
                 .split("")
-                .map((_, idx) => {
+                .map((char, idx) => {
                     if (idx < iteration) {
-                        return targetText[idx];
+                        return char; // Si ya alcanzó el índice, muestra el carácter original
                     }
-                    return letters[Math.floor(Math.random() * letters.length)];
+    
+                    // Si el carácter es un espacio, no lo cambiamos
+                    return char === ' ' ? ' ' : letters[Math.floor(Math.random() * letters.length)];
                 })
                 .join("");
-
+    
             if (iteration >= targetText.length) {
                 clearInterval(intervalRefs.current[intervalKey]!);
                 intervalRefs.current[intervalKey] = null;
             }
+    
             iteration += 1;
-        }, 20);
+        }, 7);
     };
-
+    
     useEffect(() => {
         const datos = document.querySelectorAll(".animate-data");
         datos.forEach((elem) => {
@@ -91,48 +94,42 @@ const Experience = () => {
         });
     }, [expData]);
 
+    const companias: string[] = ["Oracle", "Tata", "Tracsa"];
+
     return (
-        <section id="experience">
-            <h2>Experience</h2>
-            <div className="flex flex-row gap-5 m-5">
-                <div className="basis-2/8 flex flex-col gap-5 p-5 bordered justify-center items-center">
-                    <div
-                        onClick={() => handleChangeCompany("Oracle")}
-                        className={`${estilos.card} ${selectedCompany === "Oracle" ? estilos.active : ""
-                            }`}
-                        id="oracle"
-                    >
-                        Oracle
-                    </div>
-                    <div
-                        onClick={() => handleChangeCompany("Tata")}
-                        className={`${estilos.card} ${selectedCompany === "Tata" ? estilos.active : ""
-                            }`}
-                        id="tata"
-                    >
-                        Tata
-                    </div>
-                    <div
-                        onClick={() => handleChangeCompany("Tracsa")}
-                        className={`${estilos.card} ${selectedCompany === "Tracsa" ? estilos.active : ""
-                            }`}
-                        id="tracsa"
-                    >
-                        Tracsa
-                    </div>
+        <section id="experience" className="min-h-screen lg:bg-[url('/fondos/exp-fondo2.png')] bg-fixed bg-cover bg-no-repeat px-5 py-10">
+            <div className="flex flex-col lg:flex-row gap-5 justify-center items-center w-full min-h-screen">
+                {/* Botones de selección de empresa */}
+                <div className="w-full lg:w-1/4 flex flex-col gap-5 p-5 justify-center items-center">
+                    {companias.map((elem, index) => (
+                        <button
+                            key={index}
+                            onClick={() => handleChangeCompany(elem)}
+                            className={`
+                                w-full lg:w-11/12 h-20 md:h-24 text-black border-2 border-black
+                                transition duration-300 ease-in-out
+                                ${selectedCompany === elem ? 'bg-gray-300' : 'bg-[rgb(240,240,240)]'}
+                            `}
+                            id={elem}
+                        >
+                            <div className="h-full w-full flex justify-center items-center">
+                                <p className="font-[carbon] text-2xl md:text-3xl lg:text-4xl">{elem}</p>
+                            </div>
+                        </button>
+                    ))}
                 </div>
-                
-                {/* Experiencia y bulletpoints */}
-                <div className="basis-6/8 flex flex-col bordered p-5">
-                    <h3 className="animate-data text-5xl mb-2" id="position">
+    
+                {/* Información de experiencia */}
+                <div className="w-full lg:w-3/4 flex flex-col p-5 justify-center items-start flex-grow">
+                    <h3 className="animate-data text-2xl md:text-3xl lg:text-5xl mb-2 font-[carbon]" id="position">
                         {expData?.position}
                     </h3>
-                    <p className="animate-data text-2xl font-thin mb-5" id="company">
-                        {expData?.company}
+                    <p className="animate-data text-lg md:text-xl lg:text-2xl font-light mb-5 font-[FiraCode]" id="company">
+                        {expData?.company === 'Tata' ? "Tata Consultancy Services" : expData.company}
                     </p>
-                    <ul className="ml-4">
+                    <ul className="ml-4 list-disc">
                         {expData?.bulletpoints.map((point, index) => (
-                            <li className="animate-data text-xl list-disc font-thin" key={index} id={`bullet-${index}`}>
+                            <li className="animate-data text-sm md:text-lg lg:text-xl tracking-tight font-light mb-1 font-[FiraCode]" key={index} id={`bullet-${index}`}>
                                 {point}
                             </li>
                         ))}
