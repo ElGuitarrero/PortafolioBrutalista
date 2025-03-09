@@ -1,4 +1,4 @@
-import '@/app/components/debug.css'
+import Image from 'next/image'
 
 interface ProyectoProp {
     nombre: string,
@@ -9,18 +9,18 @@ interface ProyectoProp {
 const proyectos:ProyectoProp[] = [
     {
         nombre: "Oracle Careers",
-        detalles: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem laudantium vero nesciunt quibusdam necessitatibus maxime, sequi dolore ad fuga eum totam reiciendis laborum recusandae voluptatum, consectetur eligendi voluptatem odio eveniet",
+        detalles: "Designed and developed both the frontend and backend of the Oracle Careers Website, ensuring a seamless user experience and optimal performance. Focused on enhancing responsiveness, improving load times, and implementing best practices for scalability and maintainability. Played a key role in optimizing database interactions and refining the UI/UX to align with Oracle’s branding and user accessibility standards.",
         imagen: "/proyectos/careers.png"
     },
     {
-        nombre: "Oracle Careers",
-        detalles: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem laudantium vero nesciunt quibusdam necessitatibus maxime, sequi dolore ad fuga eum totam reiciendis laborum recusandae voluptatum, consectetur eligendi voluptatem odio eveniet",
-        imagen: "/proyectos/careers.png"
+        nombre: "AI Resume Builder",
+        detalles: "Developed an AI-powered Resume Optimizer that personalizes bullet points based on job postings, enhancing relevance and impact. Built using DeepSeek Coder 6.7B, the tool analyzes job descriptions and refines resumes to improve job application success rates. Designed with a user-friendly interface and efficient local processing for fast and accurate results.",
+        imagen: "/proyectos/resume.png"
     },
     {
-        nombre: "Oracle Careers",
-        detalles: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem laudantium vero nesciunt quibusdam necessitatibus maxime, sequi dolore ad fuga eum totam reiciendis laborum recusandae voluptatum, consectetur eligendi voluptatem odio eveniet",
-        imagen: "/proyectos/careers.png"
+        nombre: "Hydraulics Machine",
+        detalles: "Designed and built a hydraulic testing machine for Tracsa-Caterpillar to evaluate the performance and durability of hydraulic cylinders. Engineered a robust system capable of simulating real-world operating conditions, ensuring precise pressure and flow measurements. Developed a user-friendly control interface and implemented safety mechanisms to enhance reliability. The project significantly improved maintenance efficiency by providing accurate diagnostics and reducing downtime in heavy machinery operations.",
+        imagen: "/proyectos/presion.png"
     },
 ]
 
@@ -31,7 +31,7 @@ const Proyecto = (informacion:ProyectoProp) => {
         <div className="flex flex-col lg:flex-row lg:gap-10 lg:mx-5 lg:border-y-3">
             {/* Imagen */}
             <div className="basis-4/8 flex justify-center items-center lg:p-5">
-                <img src={informacion.imagen} className='aspect-20/12 max-w-1/1 lg:rounded-md drop-shadow-2xl' alt="" />
+                <Image src={informacion.imagen} className='aspect-20/12 object-cover w-1/1 i lg:rounded-md drop-shadow-2xl' alt="" />
             </div>
 
             {/* Informacion del proyecto */}
@@ -46,11 +46,6 @@ const Proyecto = (informacion:ProyectoProp) => {
 
 const Projects = () => {
     /* Que proyectos quiero meter, mmm... el resume, el "brazo robotico" y oracle careers */
-    const info:ProyectoProp = {
-        nombre: "Oracle Careers",
-        detalles: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem laudantium vero nesciunt quibusdam necessitatibus maxime, sequi dolore ad fuga eum totam reiciendis laborum recusandae voluptatum, consectetur eligendi voluptatem odio eveniet",
-        imagen: "https://www.oracle.com/a/ocom/img/logo-950x500.png"
-    }
 
     return (
         <div className=' pt-5' id='projects'>
