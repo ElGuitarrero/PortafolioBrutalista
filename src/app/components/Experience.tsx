@@ -124,7 +124,7 @@ const Experience = () => {
                     </div>
 
                     {/* Información de experiencia */}
-                    <div className="w-full lg:w-3/4 flex flex-col p-5 justify-center items-start flex-grow">
+                    <div className="w-full lg:w-3/4 flex flex-col p-5 justify-start items-start flex-grow">
                         <h3 className="animate-data text-2xl md:text-3xl lg:text-5xl mb-2 font-[carbon]" id="position">
                             {expData?.position}
                         </h3>

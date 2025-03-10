@@ -6,17 +6,19 @@ import Projects from "./components/Projects";
 import Hello from "./components/Hello";
 import '@/app/components/debug.css'
 import Contacto from "./components/Contact";
+import { ParallaxProvider } from 'react-scroll-parallax';
+
 
 
 export default function Home() {
 
   return (
-    <div>
+    <ParallaxProvider>
       <Hello></Hello>
       <Hero></Hero>
       <Experience></Experience>
       <Projects></Projects>
       <Contacto></Contacto>
-    </div>
+    </ParallaxProvider>
   )
 }
