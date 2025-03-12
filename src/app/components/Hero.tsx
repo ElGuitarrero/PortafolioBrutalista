@@ -31,7 +31,7 @@ const Hero = () => (
                 height={500}
                 src="/foto.png"
                 alt="Profile Picture"
-                className=" grayscale-30 drop-shadow-xl w-40 md:w-60 lg:w-80 outline-2 outline-offset-10 lg:outline-offset-40"
+                className="rounded-lg grayscale-30 drop-shadow-xl w-40 md:w-60 lg:w-80 outline-2 outline-offset-10 lg:outline-offset-40"
             />
         </div>
     </section>

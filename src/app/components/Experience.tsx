@@ -11,8 +11,8 @@ const DATA: ExperienceProp[] = [
         position: "Software Engineer",
         company: "Oracle",
         bulletpoints: [
-            "Led the frontend and backend development and optimization of the Oracle Careers Website",
-            "Designed and implemented microservices in Rails and Django, improving system scalability by 30%",
+            "Optimized the Oracle Careers Website, enhancing scalability for millions of users",
+            "Designed and implemented microservices in Rails & Django, boosting scalability by 30%.",
             "Provided mentorship to junior engineers and contributed to code reviews and key architectural decisions",
             "Refactored PostreSQL and Redis queries, reducing API response times by 40%",
             "Implemented CI/CD pipelines using Docker, Kubernetes, and GitHub actions, cutting deployment time by 50%.",
@@ -33,9 +33,19 @@ const DATA: ExperienceProp[] = [
         position: "Project Manager",
         company: "Tracsa",
         bulletpoints: [
-            "Implemented new features and fixed bugs",
-            "Developed and maintained web applications",
-            "Collaborated with cross-functional teams",
+            "Led the development of a cylinder testing machine for heavy machinery, managing design, implementation, and cross-functional teams.",
+            "Oversaw project timelines, budget, and resources, delivering on time and within scope.",
+            "Applied mechatronic principles to integrate mechanical, electrical, and control systems for optimal performance",
+        ],
+    },
+    {
+        position: "Skills",
+        company: "-",
+        bulletpoints: [
+            "Languages: Ruby, Python, JavaScript, SQL, Bash",
+            "Frameworks: React, Next.JS, Node.JS, Ruby on Rails, Django, FastAPI",
+            "Cloud & DevOps: AWS, Docker, Kubernetes, Terraform",
+            "Other: Industrial automation, CAD modeling, System design",
         ],
     },
 ];
@@ -94,7 +104,7 @@ const Experience = () => {
         });
     }, [expData]);
 
-    const companias: string[] = ["Oracle", "Tata", "Tracsa"];
+    const companias: string[] = ["Oracle", "Tata", "Tracsa", '-'];
 
     return (
         <div id="experience">
@@ -117,7 +127,7 @@ const Experience = () => {
                                 id={elem}
                             >
                                 <div className="h-full w-full flex justify-center items-center">
-                                    <p className="font-[carbon] text-2xl md:text-3xl lg:text-4xl">{elem}</p>
+                                    <p className="font-[carbon] text-2xl md:text-3xl lg:text-4xl">{elem == '-' ? 'Skills' : elem}</p>
                                 </div>
                             </button>
                         ))}
