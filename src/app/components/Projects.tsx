@@ -18,6 +18,11 @@ const proyectos:ProyectoProp[] = [
         imagen: "/proyectos/resume.png"
     },
     {
+        nombre: "Daniel Etienne Website",
+        detalles: "Developed a modern and visually engaging website for renowned DJ Daniel Etienne, showcasing his music, events, and personal brand. Focused on creating a seamless user experience with responsive design, interactive elements, and optimized performance to captivate his audience.",
+        imagen: "/proyectos/dj.png"
+    },
+    {
         nombre: "Hydraulics Machine",
         detalles: "Designed and built a hydraulic testing machine for Tracsa-Caterpillar to evaluate the performance and durability of hydraulic cylinders. Engineered a robust system capable of simulating real-world operating conditions, ensuring precise pressure and flow measurements. Developed a user-friendly control interface and implemented safety mechanisms to enhance reliability. The project significantly improved maintenance efficiency by providing accurate diagnostics and reducing downtime in heavy machinery operations.",
         imagen: "/proyectos/presion.png"
