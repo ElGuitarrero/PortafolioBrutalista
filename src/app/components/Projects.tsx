@@ -19,7 +19,7 @@ const proyectos:ProyectoProp[] = [
     },
     {
         nombre: "Daniel Etienne Website",
-        detalles: "Developed a modern and visually engaging website for renowned DJ Daniel Etienne, showcasing his music, events, and personal brand. Focused on creating a seamless user experience with responsive design, interactive elements, and optimized performance to captivate his audience.<br/><br/> <a href='www.danieletienne.com' class='text-gray-600' >Daniel Etienne Website</a>",
+        detalles: "Developed a modern and visually engaging website for renowned DJ Daniel Etienne, showcasing his music, events, and personal brand. Focused on creating a seamless user experience with responsive design, interactive elements, and optimized performance to captivate his audience.<br/><br/> <a href='http://www.danieletienne.com' class='text-gray-600' >Daniel Etienne Website</a>",
         imagen: "/proyectos/dj.png"
     },
     {
