@@ -121,8 +121,8 @@ const Experience = () => {
                                 onClick={() => handleChangeCompany(elem)}
                                 className={`
                                 w-full lg:w-11/12 h-20 md:h-24 text-black border-2 border-black
-                                transition duration-300 ease-in-out
-                                ${selectedCompany === elem ? 'bg-gray-300' : 'bg-[rgb(240,240,240)]'}
+                                transition-all duration-300 hover:scale-103
+                                ${selectedCompany === elem ? 'bg-gray-300 scale-115 hover:scale-115' : 'bg-[rgb(240,240,240)]'}
                             `}
                                 id={elem}
                             >

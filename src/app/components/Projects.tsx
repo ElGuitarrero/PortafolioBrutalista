@@ -19,7 +19,7 @@ const proyectos:ProyectoProp[] = [
     },
     {
         nombre: "Daniel Etienne Website",
-        detalles: "Developed a modern and visually engaging website for renowned DJ Daniel Etienne, showcasing his music, events, and personal brand. Focused on creating a seamless user experience with responsive design, interactive elements, and optimized performance to captivate his audience.",
+        detalles: "Developed a modern and visually engaging website for renowned DJ Daniel Etienne, showcasing his music, events, and personal brand. Focused on creating a seamless user experience with responsive design, interactive elements, and optimized performance to captivate his audience.<br/><br/> <a href='www.danieletienne.com' class='text-gray-600' >Daniel Etienne Website</a>",
         imagen: "/proyectos/dj.png"
     },
     {
@@ -36,13 +36,16 @@ const Proyecto = (informacion:ProyectoProp) => {
         <div className="flex flex-col lg:flex-row lg:gap-10 lg:mx-5 lg:border-y-3">
             {/* Imagen */}
             <div className="basis-4/8 flex justify-center items-center lg:p-5">
-                <Image width={400} height={600} src={informacion.imagen} className='aspect-20/12 object-cover w-1/1 i lg:rounded-md drop-shadow-2xl' alt="" />
+                <Image width={1440} height={1024} src={informacion.imagen} className='aspect-20/12 object-cover w-1/1 i lg:rounded-md drop-shadow-2xl' alt="" />
             </div>
 
             {/* Informacion del proyecto */}
             <div className='basis-4/8  p-5 lg:py-20 flex flex-col gap-5'>
                 <p className='text-5xl font-[carbon]'>{informacion.nombre}</p>
-                <p className='text-xl font-extralight font-[FiraCode] tracking-tight'>{informacion.detalles}</p>
+                <div
+                    className='text-xl font-extralight font-[FiraCode] tracking-tight'
+                    dangerouslySetInnerHTML={{ __html: informacion.detalles }}
+                />
             </div>
         </div>
     )
@@ -63,7 +66,7 @@ const Projects = () => {
                     <Proyecto key={index} {...info}/>
                 ))}
             </div>
-
+                
         </div>
     )
 
