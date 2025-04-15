@@ -11,12 +11,12 @@ const DATA: ExperienceProp[] = [
         position: "Software Engineer",
         company: "Oracle",
         bulletpoints: [
-            "Optimized the Oracle Careers Website, enhancing scalability for millions of users",
-            "Designed and implemented microservices in Rails & Django, boosting scalability by 30%.",
-            "Provided mentorship to junior engineers and contributed to code reviews and key architectural decisions",
-            "Refactored PostreSQL and Redis queries, reducing API response times by 40%",
-            "Implemented CI/CD pipelines using Docker, Kubernetes, and GitHub actions, cutting deployment time by 50%.",
-            "Collaborated with product and architecture teams to enhance platform resilience against 200% traffic spikes."
+            "Played a key role in the backend migration for the Oracle Health & Cerner merge, integrating APIs and ensuring system stability.",
+            "Designed and implemented microservices in Typescript & Django, boosting scalability by 30% and improving maintainability.",
+            "Refactored key database queries in PostgreSQL & Redis, reducing API response times by 40% and enhancing performance.",
+            "Optimized the Oracle Careers Website, enabling seamless scalability for millions of users worldwide.",
+            "Automated CI/CD pipelines using Docker, Kubernetes, and GitHub Actions, cutting deployment time by 50% and reducing manual intervention.",
+            "Collaborated with cross-functional teams to enhance security compliance, ensuring adherence to industry standards.",
         ],
     },
     {
@@ -25,7 +25,7 @@ const DATA: ExperienceProp[] = [
         bulletpoints: [
             "Developed scalable RESTful APIs in Ruby on Rails and Django for 500+ active monthly users.",
             "Integrated GraphQL and WebSockets to improve real-time user experience.",
-            "Migrated on-premises infrastructure AWS with Terraform, reducing operational costs by 20%",
+            "Migrated on-premises infrastructure AWS with Terraform, reducing operational costs by 20%.",
             "Applied TDD with Spec and PyTest, improving code stability and reducing production incidents.",
         ],
     },
@@ -35,17 +35,19 @@ const DATA: ExperienceProp[] = [
         bulletpoints: [
             "Led the development of a cylinder testing machine for heavy machinery, managing design, implementation, and cross-functional teams.",
             "Oversaw project timelines, budget, and resources, delivering on time and within scope.",
-            "Applied mechatronic principles to integrate mechanical, electrical, and control systems for optimal performance",
+            "Applied mechatronic principles to integrate mechanical, electrical, and control systems for optimal performance.",
         ],
     },
     {
         position: "Skills",
         company: "-",
         bulletpoints: [
-            "Languages: Ruby, Python, JavaScript, SQL, Bash",
-            "Frameworks: React, Next.JS, Node.JS, Ruby on Rails, Django, FastAPI",
-            "Cloud & DevOps: AWS, Docker, Kubernetes, Terraform",
-            "Other: Industrial automation, CAD modeling, System design",
+            "Languages: C#, Ruby, Python, JavaScript, TypeScript, SQL, Bash",
+            "Frameworks & Libraries: .NET Framework, ASP.NET, Web API, Ruby on Rails, Django, React, Angular, Next.js, FastAPI, Entity Framework",
+            "Databases: SQL Server, MySQL",
+            "Cloud & DevOps: AWS, Docker, Kubernetes, Terraform, CI/CD (GitHub Actions, Jenkins, GitLab CI/CD)",
+            "Testing: JUnit, PyTest, RSpec, Jest",
+            "Web Technologies: HTML, CSS, JS",
         ],
     },
 ];
@@ -121,7 +123,7 @@ const Experience = () => {
                                 onClick={() => handleChangeCompany(elem)}
                                 className={`
                                 w-full lg:w-11/12 h-20 md:h-24 text-black border-2 border-black
-                                transition-all duration-300 hover:scale-103
+                                transition-all duration-300 hover:scale-103 cursor-pointer
                                 ${selectedCompany === elem ? 'bg-gray-300 scale-115 hover:scale-115' : 'bg-[rgb(240,240,240)]'}
                             `}
                                 id={elem}
