@@ -1,3 +1,4 @@
+
 import { useEffect, useState, useRef } from "react";
 
 interface ExperienceProp {
@@ -11,22 +12,24 @@ const DATA: ExperienceProp[] = [
         position: "Software Engineer",
         company: "Oracle",
         bulletpoints: [
-            "Played a key role in the backend migration for the Oracle Health & Cerner merge, integrating APIs and ensuring system stability.",
-            "Designed and implemented microservices in Typescript & Django, boosting scalability by 30% and improving maintainability.",
-            "Refactored key database queries in PostgreSQL & Redis, reducing API response times by 40% and enhancing performance.",
-            "Optimized the Oracle Careers Website, enabling seamless scalability for millions of users worldwide.",
-            "Automated CI/CD pipelines using Docker, Kubernetes, and GitHub Actions, cutting deployment time by 50% and reducing manual intervention.",
-            "Collaborated with cross-functional teams to enhance security compliance, ensuring adherence to industry standards.",
+            "Played a key role in the Oracle Health & Cerner integration, leading critical backend API migrations and ensuring system stability at enterprise scale.",
+            "Designed and deployed microservices in TypeScript, Django, and PostgreSQL, improving scalability by 30% and reducing operational complexity.",
+            "Modernized internal dashboards using React and Next.js, enabling real-time system insights and dynamic admin interfaces.",
+            "Optimized database performance in PostgreSQL and Redis, reducing API response times by 40% and supporting millions of transactions daily.",
+            "Upgraded the Oracle Careers Website to support global scalability, integrating smarter job-matching features using lightweight AI modules.",
+            "Automated CI/CD workflows with Docker, Kubernetes, and GitHub Actions, cutting deployment times by 50% and enhancing developer productivity.",
+            "Collaborated across product, engineering, and infrastructure teams, contributing to system design reviews, code quality initiatives, and architecture evolution projects.",
+            "Leveraged AI tools selectively to accelerate development workflows, improve test coverage, and support scalable cloud deployments.",
         ],
     },
     {
         position: "Backend Developer",
         company: "Tata",
         bulletpoints: [
-            "Developed scalable RESTful APIs in Ruby on Rails and Django for 500+ active monthly users.",
-            "Integrated GraphQL and WebSockets to improve real-time user experience.",
-            "Migrated on-premises infrastructure AWS with Terraform, reducing operational costs by 20%.",
-            "Applied TDD with Spec and PyTest, improving code stability and reducing production incidents.",
+            "Supported backend operations for the IHG Hotels line, ensuring database integrity and system reliability across production environments.",
+            "Assisted in the development and maintenance of RESTful APIs using Ruby on Rails and Django, serving 500K+ active monthly users.",
+            "Contributed to cloud migration efforts to AWS using Terraform, helping optimize infrastructure costs and improve deployment workflows.",
+            "Applied basic TDD practices with RSpec and PyTest, improving backend stability and reducing support incidents.",
         ],
     },
     {
@@ -50,6 +53,7 @@ const DATA: ExperienceProp[] = [
             "Web Technologies: HTML, CSS, JS",
         ],
     },
+    
 ];
 
 const Experience = () => {
