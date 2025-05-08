@@ -32,6 +32,12 @@ No fluff — just clean architecture, raw typography, and projects that speak fo
 
 ---
 
+## Video
+
+[Link](https://youtu.be/_WrD7tvm6w4)
+
+---
+
 ## 📸 Screenshots
 
 ### 🏠 Homepage

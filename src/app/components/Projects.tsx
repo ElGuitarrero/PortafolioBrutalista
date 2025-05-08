@@ -14,6 +14,7 @@ const proyectos: ProyectoProp[] = [
         imagen: "/proyectos/careers.png",
         link: "https://careers.oracle.com"
     },
+    
     {
         nombre: "Daniel Etienne Website",
         detalles: "Developed a modern and visually engaging website for renowned DJ Daniel Etienne, showcasing his music, events, and personal brand. Focused on creating a seamless user experience with responsive design, interactive elements, and optimized performance to captivate his audience.",
@@ -21,15 +22,16 @@ const proyectos: ProyectoProp[] = [
         link: "http://www.danieletienne.com"
     },
     {
+        nombre: "AI Resume Builder",
+        detalles: "Developed an AI-powered Resume Optimizer that personalizes bullet points based on job postings, enhancing relevance and impact. Built using DeepSeek Coder 6.7B, the tool analyzes job descriptions and refines resumes to improve job application success rates. Designed with a user-friendly interface and efficient local processing for fast and accurate results.",
+        imagen: "/proyectos/resume.png",
+        link: "https://youtu.be/_WrD7tvm6w4"
+    },
+    {
         nombre: "Lone Star Code",
         detalles: "We focus on custom websites, booking systems, and process automation, combining clean design with practical engineering. I handle both the technical execution and client communication, making sure each solution truly fits the business's needs.",
         imagen: "/proyectos/lone-star.png",
         link: "http://www.lonestarcode.net"
-    },
-    {
-        nombre: "AI Resume Builder",
-        detalles: "Developed an AI-powered Resume Optimizer that personalizes bullet points based on job postings, enhancing relevance and impact. Built using DeepSeek Coder 6.7B, the tool analyzes job descriptions and refines resumes to improve job application success rates. Designed with a user-friendly interface and efficient local processing for fast and accurate results.",
-        imagen: "/proyectos/resume.png"
     },
     {
         nombre: "Hydraulics Machine",
