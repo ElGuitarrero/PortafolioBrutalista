@@ -69,7 +69,7 @@ const Hello = () => {
     return (
         <div
             className="h-screen font-[carbon] text-[6rem] sm:text-[10rem] lg:text-[14rem] 
-            bg-[url('/textura2.png')] bg-no-repeat bg-cover bg-center lg:bg-fixed font-black 
+            bg-[url('/textura2.webp')] bg-no-repeat bg-cover bg-center lg:bg-fixed font-black 
             flex flex-col lg:flex-row gap-5 sm:gap-10 px-5 justify-center relative overflow-hidden"
             style={{
                 backgroundSize: "cover",
@@ -105,7 +105,7 @@ function ObjetoParallax( {imagen, startX, endX, startY, endY}:ParaProps ) {
                 startScroll={0} // Inicia el efecto de parallax desde el principio
                 endScroll={1000} // Ajusta el punto final del efecto
             >
-                <img src={`/hello-images/${imagen}.png`} alt="" className="w-full h-auto" />
+                <img src={`/hello-images/${imagen}.webp`} alt="" className="w-full h-auto" />
             </Parallax>
         </div>
     )

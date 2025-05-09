@@ -13,32 +13,32 @@ const proyectos: ProyectoProp[] = [
     {
         nombre: "Oracle Careers",
         detalles: "Designed and developed both the frontend and backend of the Oracle Careers Website, ensuring a seamless user experience and optimal performance. Focused on enhancing responsiveness, improving load times, and implementing best practices for scalability and maintainability. Played a key role in optimizing database interactions and refining the UI/UX to align with Oracle’s branding and user accessibility standards.",
-        imagen: "/proyectos/careers.png",
+        imagen: "/proyectos/careers.webp",
         link: "https://careers.oracle.com"
     },
     
     {
         nombre: "Daniel Etienne Website",
         detalles: "Developed a modern and visually engaging website for renowned DJ Daniel Etienne, showcasing his music, events, and personal brand. Focused on creating a seamless user experience with responsive design, interactive elements, and optimized performance to captivate his audience.",
-        imagen: "/proyectos/dj.png",
+        imagen: "/proyectos/dj.webp",
         link: "http://www.danieletienne.com"
     },
     {
         nombre: "AI Resume Builder",
         detalles: "Developed an AI-powered Resume Optimizer that personalizes bullet points based on job postings, enhancing relevance and impact. Built using DeepSeek Coder 6.7B, the tool analyzes job descriptions and refines resumes to improve job application success rates. Designed with a user-friendly interface and efficient local processing for fast and accurate results.",
-        imagen: "/proyectos/resume.png",
+        imagen: "/proyectos/resume.webp",
         link: "https://youtu.be/_WrD7tvm6w4"
     },
     {
         nombre: "Lone Star Code",
         detalles: "We focus on custom websites, booking systems, and process automation, combining clean design with practical engineering. I handle both the technical execution and client communication, making sure each solution truly fits the business's needs.",
-        imagen: "/proyectos/lone-star.png",
+        imagen: "/proyectos/lone-star.webp",
         link: "http://www.lonestarcode.net"
     },
     {
         nombre: "Hydraulics Machine",
         detalles: "Designed and built a hydraulic testing machine for Tracsa-Caterpillar to evaluate the performance and durability of hydraulic cylinders. Engineered a robust system capable of simulating real-world operating conditions, ensuring precise pressure and flow measurements. Developed a user-friendly control interface and implemented safety mechanisms to enhance reliability. The project significantly improved maintenance efficiency by providing accurate diagnostics and reducing downtime in heavy machinery operations.",
-        imagen: "/proyectos/presion.png"
+        imagen: "/proyectos/presion.webp"
     },
 
 ]
