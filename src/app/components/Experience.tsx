@@ -1,5 +1,6 @@
 
 import { useEffect, useState, useRef } from "react";
+import FadeInSection from "./FadeInSection";
 
 interface ExperienceProp {
     position: string;
@@ -115,45 +116,50 @@ const Experience = () => {
     return (
         <div id="experience">
             <div className='flex justify-center'>
+                <FadeInSection>
                 <h2 className='font-[carbon] text-3xl'>Experience</h2>
+                </FadeInSection>
             </div>
             <section id="experience" className="min-h-screen lg:bg-[url('/fondos/exp-fondo2.png')] bg-fixed bg-cover bg-no-repeat px-5 py-10">
                 <div className="flex flex-col lg:flex-row gap-5 justify-center items-center w-full min-h-screen">
-                    {/* Botones de selección de empresa */}
                     <div className="w-full lg:w-1/4 flex flex-col gap-5 p-5 justify-center items-center">
-                        {companias.map((elem, index) => (
-                            <button
-                                key={index}
-                                onClick={() => handleChangeCompany(elem)}
-                                className={`
-                                w-full lg:w-11/12 h-20 md:h-24 text-black border-2 border-black
-                                transition-all duration-300 hover:scale-103 cursor-pointer
-                                ${selectedCompany === elem ? 'bg-gray-300 scale-115 hover:scale-115' : 'bg-[rgb(240,240,240)]'}
+                    {companias.map((elem, index) => (
+                        <FadeInSection key={index} style={{width: "100%"}}>
+                        <button
+                            onClick={() => handleChangeCompany(elem)}
+                            className={`
+                            w-full lg:w-11/12 h-20 md:h-24 text-black border-2 border-black
+                            transition-all duration-300 hover:scale-103 cursor-pointer
+                            ${selectedCompany === elem ? 'bg-gray-300 scale-115 hover:scale-115' : 'bg-[rgb(240,240,240)]'}
                             `}
-                                id={elem}
-                            >
-                                <div className="h-full w-full flex justify-center items-center">
-                                    <p className="font-[carbon] text-2xl md:text-3xl lg:text-4xl">{elem == '-' ? 'Skills' : elem}</p>
-                                </div>
-                            </button>
-                        ))}
+                            id={elem}
+                        >
+                            <div className="h-full w-full flex justify-center items-center">
+                            <p className="font-[carbon] text-2xl md:text-3xl lg:text-4xl">{elem === '-' ? 'Skills' : elem}</p>
+                            </div>
+                        </button>
+                        </FadeInSection>
+                    ))}
                     </div>
 
                     {/* Información de experiencia */}
                     <div className="w-full lg:w-3/4 flex flex-col p-5 justify-start items-start flex-grow">
-                        <h3 className="animate-data text-2xl md:text-3xl lg:text-5xl mb-2 font-[carbon]" id="position">
+                        <FadeInSection><h3 className="animate-data text-2xl md:text-3xl lg:text-5xl mb-2 font-[carbon]" id="position">
                             {expData?.position}
-                        </h3>
-                        <p className="animate-data text-lg md:text-xl lg:text-2xl font-light mb-5 font-[FiraCode]" id="company">
+                        </h3></FadeInSection>
+                        <FadeInSection><p className="animate-data text-lg md:text-xl lg:text-2xl font-light mb-5 font-[FiraCode]" id="company">
                             {expData?.company === 'Tata' ? "Tata Consultancy Services" : expData.company}
-                        </p>
-                        <ul className="ml-4 list-disc">
+                        </p></FadeInSection>
+                        <FadeInSection><ul className="ml-4 list-disc">
                             {expData?.bulletpoints.map((point, index) => (
                                 <li className="animate-data text-sm md:text-lg lg:text-xl tracking-tight font-light mb-1 font-[FiraCode]" key={index} id={`bullet-${index}`}>
                                     {point}
                                 </li>
                             ))}
-                        </ul>
+                        </ul></FadeInSection>
+                        
+                        
+                        
                     </div>
                 </div>
             </section>

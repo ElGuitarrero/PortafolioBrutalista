@@ -1,4 +1,5 @@
 import { Parallax } from "react-scroll-parallax";
+import FadeInSection from "./FadeInSection";
 
 interface ParaProps {
     imagen: string,
@@ -80,7 +81,7 @@ const Hello = () => {
                 className="w-full lg:w-1/2 flex justify-center items-start p-10 sm:p-20"
                 style={{ WebkitTextStroke: "3px rgb(240,240,240)" }}
             >
-                <div>HELLO <br /> THERE</div>
+                <FadeInSection><div>HELLO <br /> THERE</div></FadeInSection>
             </div>
 
             {/* Imagen con Parallax */}

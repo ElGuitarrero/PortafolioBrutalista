@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import ScrollFromSide from './ScrollFromSide'
+import FadeInSection from './FadeInSection'
 
 interface ProyectoProp {
     nombre: string,
@@ -77,12 +79,14 @@ const Projects = () => {
     return (
         <div className=' pt-5' id='projects'>
             <div className='flex justify-center'>
-                <h2 className='font-[carbon] text-3xl'>Projects</h2>
+                <ScrollFromSide><h2 className='font-[carbon] text-3xl'>Projects</h2></ScrollFromSide>
             </div>
 
             <div id="proyectos" className='flex flex-col gap-10 my-15'>
                 {proyectos.map((info, index) => (
-                    <Proyecto key={index} {...info} />
+                    <FadeInSection key={index} viewAmount={0.4}>
+                        <Proyecto  {...info} />
+                    </FadeInSection>
                 ))}
             </div>
 
